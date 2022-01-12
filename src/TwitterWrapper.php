@@ -2,13 +2,8 @@
 
 namespace Laravapi\Twitter;
 
-class TwitterWrapper
+class TwitterWrapper implements WrapperInterface
 {
-    public function test()
-    {
-        return 234;
-    }
-
     public function neededCredentials()
     {
         return [
@@ -17,5 +12,28 @@ class TwitterWrapper
             'TWITTER_ACCESS_TOKEN' => 'Some description',
             'TWITTER_ACCESS_TOKEN_SECRET' => 'Some description',
         ];
+    }
+    
+    public function config()
+    {
+        return [
+            'TWITTER_CONSUMER_KEY' => 'services.twitter.consumer-key',  
+            'TWITTER_CONSUMER_SECRET' => 'services.twitter.consumer-secret',  
+        ];
+    }
+
+    /**
+     * @method tweet Tweet a tweet
+     * @method follower Get followers
+     */
+    public function tweet($a, $b)
+    {
+        dump($a);
+        dump($b);
+    }
+
+    public function testTweet()
+    {
+
     }
 }
