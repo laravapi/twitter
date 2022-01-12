@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Laravapi\Twitter\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class TwitterCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'twitter';
 
     public $description = 'My command';
 
