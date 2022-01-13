@@ -6,23 +6,25 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TwitterWrapper
 {
-    public function neededCredentials()
-    {
-        return [
-            'TWITTER_CONSUMER_KEY' => 'Some description',
-            'TWITTER_CONSUMER_SECRET' => 'Some description',
-            'TWITTER_ACCESS_TOKEN' => 'Some description',
-            'TWITTER_ACCESS_TOKEN_SECRET' => 'Some description',
-        ];
-    }
-
     public function config()
     {
         return [
-            'TWITTER_CONSUMER_KEY' => 'services.twitter.consumer-key',
-            'TWITTER_CONSUMER_SECRET' => 'services.twitter.consumer-secret',
-            'TWITTER_ACCESS_TOKEN' => 'services.twitter.access-token',
-            'TWITTER_ACCESS_TOKEN_SECRET' => 'services.twitter.access-token-secret',
+            'TWITTER_CONSUMER_KEY' => [
+                'config' => 'services.twitter.consumer-key',
+                'description' => 'Description for config key 1',
+            ],
+            'TWITTER_CONSUMER_SECRET' => [
+                'config' => 'services.twitter.consumer-secret',
+                'description' => 'Description for config key 2',
+            ],
+            'TWITTER_ACCESS_TOKEN' => [
+                'config' => 'services.twitter.access-token',
+                'description' => 'Description for config key 2',
+            ],
+            'TWITTER_ACCESS_TOKEN_SECRET' => [
+                'config' => 'services.twitter.access-token-secret',
+                'description' => 'Description for config key 2',
+            ],
         ];
     }
 
