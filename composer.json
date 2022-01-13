@@ -56,7 +56,7 @@
                 "LaravelApi\\Twitter\\TwitterServiceProvider"
             ],
             "aliases": {
-                "Twitter": "LaravelApi\\Twitter\\Facades\\Twitter"
+                "Twitter": "TwitterWrapper"
             }
         }
     },

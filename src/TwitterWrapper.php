@@ -3,10 +3,23 @@
 namespace LaravelApi\Twitter;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
+use LaravelApi\LaravelApi\WrapperInterface;
 
-class TwitterWrapper
+class TwitterWrapper implements WrapperInterface
 {
-    public function config()
+    public function boot(): void
+    {
+        app()->singleton(TwitterOAuth::class, function(): TwitterOAuth {
+            return new TwitterOAuth(
+                (string) config('services.twitter.consumer-key'),
+                (string) config('services.twitter.consumer-secret'),
+                (string) config('services.twitter.access-token'),
+                (string) config('services.twitter.access-token-secret')
+            );
+        });
+    }
+
+    public function config(): array
     {
         return [
             'TWITTER_CONSUMER_KEY' => [
@@ -33,27 +46,13 @@ class TwitterWrapper
      *
      * Easily send a tweet to your timeline
      */
-    public function tweet(string $status)
+    public function tweet(string $status): object|array
     {
-        dd(app(TwitterOAuth::class)->post("statuses/update", ["status" => $status]));
+        return app(TwitterOAuth::class)->post("statuses/update", ["status" => $status]);
     }
 
     public function __call(string $name, array $arguments)
     {
-       app(TwitterOAuth::class)->$name(...$arguments);
-    }
-
-
-    public function boot()
-    {
-//        dd(config('services.twitter'));
-        app()->singleton(TwitterOAuth::class, function(): TwitterOAuth {
-            return new TwitterOAuth(
-                (string) config('services.twitter.consumer-key'),
-                (string) config('services.twitter.consumer-secret'),
-                (string) config('services.twitter.access-token'),
-                (string) config('services.twitter.access-token-secret')
-            );
-        });
+       return app(TwitterOAuth::class)->$name(...$arguments);
     }
 }

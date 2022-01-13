@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \LaravelApi\Twitter\Twitter
  */
-class Twitter extends Facade
+class TwitterWrapper extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'twitter';
+        return \LaravelApi\Twitter\TwitterWrapper::class;
     }
 }
