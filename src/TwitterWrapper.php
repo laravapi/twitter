@@ -3,8 +3,9 @@
 namespace LaravelApi\Twitter;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
+use LaravelApi\LaravelApi\WrapperInterface;
 
-class TwitterWrapper
+class TwitterWrapper implements WrapperInterface
 {
     public function boot(): void
     {
