@@ -20,7 +20,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require laravapi/twitter
+composer require laravel-api/twitter
 ```
 
 You can publish and run the migrations with:
@@ -52,8 +52,8 @@ php artisan vendor:publish --tag="twitter-views"
 ## Usage
 
 ```php
-$twitter = new Laravapi\Twitter();
-echo $twitter->echoPhrase('Hello, Laravapi!');
+$twitter = new LaravelApi\Twitter();
+echo $twitter->echoPhrase('Hello, LaravelApi!');
 ```
 
 ## Testing

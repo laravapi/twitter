@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravapi\Twitter;
+namespace LaravelApi\Twitter;
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 

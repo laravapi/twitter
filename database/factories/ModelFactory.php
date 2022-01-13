@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravapi\Twitter\Database\Factories;
+namespace LaravelApi\Twitter\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

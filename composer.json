@@ -1,8 +1,7 @@
 {
-    "name": "laravapi/twitter",
+    "name": "laravel-api/twitter",
     "description": "This is my package twitter",
     "keywords": [
-        "laravapi",
         "laravel",
         "twitter"
     ],
@@ -31,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravapi\\Twitter\\": "src",
-            "Laravapi\\Twitter\\Database\\Factories\\": "database/factories"
+            "LaravelApi\\Twitter\\": "src",
+            "LaravelApi\\Twitter\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laravapi\\Twitter\\Tests\\": "tests"
+            "LaravelApi\\Twitter\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +53,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Laravapi\\Twitter\\TwitterServiceProvider"
+                "LaravelApi\\Twitter\\TwitterServiceProvider"
             ],
             "aliases": {
-                "Twitter": "Laravapi\\Twitter\\Facades\\Twitter"
+                "Twitter": "LaravelApi\\Twitter\\Facades\\Twitter"
             }
         }
     },

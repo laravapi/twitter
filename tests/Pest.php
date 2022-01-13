@@ -1,5 +1,5 @@
 <?php
 
-use Laravapi\Twitter\Tests\TestCase;
+use LaravelApi\Twitter\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

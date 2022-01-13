@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravapi\Twitter;
+namespace LaravelApi\Twitter;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Laravapi\Twitter\Commands\TwitterCommand;
+use LaravelApi\Twitter\Commands\TwitterCommand;
 
 class TwitterServiceProvider extends PackageServiceProvider
 {

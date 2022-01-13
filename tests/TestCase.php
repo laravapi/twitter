@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravapi\Twitter\Tests;
+namespace LaravelApi\Twitter\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Laravapi\Twitter\TwitterServiceProvider;
+use LaravelApi\Twitter\TwitterServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Laravapi\\Twitter\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'LaravelApi\\Twitter\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

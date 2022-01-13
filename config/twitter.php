@@ -1,5 +1,5 @@
 <?php
-// config for Laravapi/Twitter
+// config for LaravelApi/Twitter
 return [
 
 ];

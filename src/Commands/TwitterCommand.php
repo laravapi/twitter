@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravapi\Twitter\Commands;
+namespace LaravelApi\Twitter\Commands;
 
 use Illuminate\Console\Command;
 

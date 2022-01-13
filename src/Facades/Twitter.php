@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravapi\Twitter\Facades;
+namespace LaravelApi\Twitter\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Laravapi\Twitter\Twitter
+ * @see \LaravelApi\Twitter\Twitter
  */
 class Twitter extends Facade
 {
