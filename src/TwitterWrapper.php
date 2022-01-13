@@ -19,15 +19,20 @@ class TwitterWrapper
             ],
             'TWITTER_ACCESS_TOKEN' => [
                 'config' => 'services.twitter.access-token',
-                'description' => 'Description for config key 2',
+                'description' => 'Description for config key 3',
             ],
             'TWITTER_ACCESS_TOKEN_SECRET' => [
                 'config' => 'services.twitter.access-token-secret',
-                'description' => 'Description for config key 2',
+                'description' => 'Description for config key 4',
             ],
         ];
     }
 
+    /**
+     * Tweet a tweet
+     *
+     * Easily send a tweet to your timeline
+     */
     public function tweet(string $status)
     {
         dd(app(TwitterOAuth::class)->post("statuses/update", ["status" => $status]));
