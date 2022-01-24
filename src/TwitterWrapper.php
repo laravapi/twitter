@@ -7,6 +7,8 @@ use LaravelApi\LaravelApi\WrapperInterface;
 
 class TwitterWrapper implements WrapperInterface
 {
+    public string $faker = TwitterWrapperFaker::class;
+
     public function boot(): void
     {
         app()->singleton(TwitterOAuth::class, function(): TwitterOAuth {
@@ -49,6 +51,16 @@ class TwitterWrapper implements WrapperInterface
     public function tweet(string $status): object|array
     {
         return app(TwitterOAuth::class)->post("statuses/update", ["status" => $status]);
+    }
+
+    /**
+     * Search for tweets
+     *
+     * Easily search for tweets on Twitter
+     */
+    public function search(string $searchTerm): object|array
+    {
+        return app(TwitterOAuth::class)->get("search/tweets", ["q" => $searchTerm]);
     }
 
     public function __call(string $name, array $arguments)
