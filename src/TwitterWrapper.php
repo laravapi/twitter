@@ -45,7 +45,9 @@ class TwitterWrapper implements WrapperInterface
 
     public function check(): bool
     {
-        return app(TwitterOAuth::class)->get("search/tweets", ['q' => 'dummy']);
+        $response =  app(TwitterOAuth::class)->get("account/verify_credentials");
+
+        return property_exists($response, 'errors');
     }
 
     /**
