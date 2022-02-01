@@ -47,7 +47,7 @@ class TwitterWrapper implements WrapperInterface
     {
         $response =  app(TwitterOAuth::class)->get("account/verify_credentials");
 
-        return property_exists($response, 'errors');
+        return ! property_exists($response, 'errors');
     }
 
     /**
