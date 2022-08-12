@@ -12,12 +12,14 @@ class TwitterWrapper implements WrapperInterface
     public function boot(): void
     {
         app()->singleton(TwitterOAuth::class, function(): TwitterOAuth {
-            return new TwitterOAuth(
+            $client =new TwitterOAuth(
                 (string) config('services.twitter.consumer-key'),
                 (string) config('services.twitter.consumer-secret'),
                 (string) config('services.twitter.access-token'),
                 (string) config('services.twitter.access-token-secret')
             );
+            $client->setApiVersion('2');
+            return $client;
         });
     }
 
