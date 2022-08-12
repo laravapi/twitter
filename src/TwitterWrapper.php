@@ -26,19 +26,19 @@ class TwitterWrapper implements WrapperInterface
         return [
             'TWITTER_CONSUMER_KEY' => [
                 'config' => 'services.twitter.consumer-key',
-                'description' => 'Description for config key 1',
+                'description' => '"API Key" of the Twitter app',
             ],
             'TWITTER_CONSUMER_SECRET' => [
                 'config' => 'services.twitter.consumer-secret',
-                'description' => 'Description for config key 2',
+                'description' => '"API Key Secret" of the Twitter app',
             ],
             'TWITTER_ACCESS_TOKEN' => [
                 'config' => 'services.twitter.access-token',
-                'description' => 'Description for config key 3',
+                'description' => '"Access Token" of the Twitter app',
             ],
             'TWITTER_ACCESS_TOKEN_SECRET' => [
                 'config' => 'services.twitter.access-token-secret',
-                'description' => 'Description for config key 4',
+                'description' => '"Access Token Secret" of the Twitter app',
             ],
         ];
     }
